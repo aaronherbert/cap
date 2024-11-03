@@ -10,6 +10,11 @@ terraform {
       source = "hashicorp/random"
       version = ">= 3.0"
     }
+    github = {
+      source = "integrations/github"
+      version = "~> 6.0"
+    }
+    
   }
 }
 
@@ -23,7 +28,7 @@ resource "random_string" "myrandom" {
   length = 6
   upper = false 
   special = false
-  number = false   
+  numeric = false   
 }
 
 
